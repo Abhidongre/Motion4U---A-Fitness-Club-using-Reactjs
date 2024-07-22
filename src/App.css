@@ -1,0 +1,252 @@
+/* src/App.css */
+
+/* Global styles */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #0000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Remove scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Adjust specific elements for smaller screens */
+    .hero-banner-img {
+        display: none;
+    }
+
+    .exercise-card {
+        width: 320px;
+    }
+
+    .exercise-video {
+        width: 320px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .exercise-card {
+        width: 280px;
+    }
+}
+
+/* Navbar */
+.black-appbar {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  }
+  
+.black-appbar.scrolled {
+  background-color:#fff;
+  }
+
+.navbar-logo {
+  background-color: aqua;
+  border-radius: 5px;
+
+}
+
+.navbar-title {
+  flex-grow: 1;
+  color:#000000;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  
+}
+
+.navbar-link {
+  color:#000000;
+  text-decoration: none;
+  padding-bottom:10px;
+}
+
+.navbar-link:hover {
+  border-bottom: 3px solid #FF2625;
+}
+
+.navbar-link.active {
+  border-bottom: 3px solid #FF2625;
+}
+
+.menu-icon {
+  margin-left: auto;
+}
+
+/* Responsive design for navbar logo */
+@media (max-width: 600px) {
+  .navbar-logo {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media (min-width: 600px) {
+  .navbar-logo {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
+  /* Mycarousel */
+  .carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-height:100vh;
+  }
+  
+  .carousel-legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-right: 40px;
+    text-align: left;
+    color: white;
+    width: 40%;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(350px, 50vw, 100vh);
+  }
+  
+  
+  .explore-button {
+    color: white;
+    background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
+    text-align: center;
+  }
+  
+  .explore-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.5);
+  }
+  
+  /* Control arrows background for better visibility */
+  .carousel .control-arrow {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel .control-prev.control-arrow {
+    left: 0;
+  }
+  
+  .carousel .control-next.control-arrow {
+    right: 0;
+  }
+   
+/* Horizontal-Scrolling-Menu*/
+.horizontal-scrollbar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Ensure no overflow of scroll menu */
+}
+
+.scroll-menu {
+  flex-grow: 1;
+  overflow: hidden; /* Hide overflow */
+}
+
+.arrow {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255,1);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 50%; 
+  transform: translateY(50%); /* Center vertically */
+  z-index: 2;
+}
+
+.left-arrow {
+  left: 10px; 
+}
+
+.right-arrow {
+  right: 10px; 
+}
+
+
+/*Exercises */
+/* App.css */
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  #exercises {
+    padding: 10px;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 1.5rem;
+  }
+
+  .MuiPagination-root {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 960px) {
+  #exercises {
+    padding: 15px;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 2rem;
+  }
+
+  .MuiPagination-root {
+    font-size: 1rem;
+  }
+}
