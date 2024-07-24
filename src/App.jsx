@@ -18,7 +18,7 @@ function App() {
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
         <Route path="/exercise" element={<ExercisesPage />} />
         <Route path="/bmi-calculator" element={<Bmi />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/*" element={<PageNotFound />} /> {/* Add this line */}
       </Routes>
       <Footer />
     </Box>
