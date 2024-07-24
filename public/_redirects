@@ -1,0 +1,6 @@
+# Redirect specific paths to themselves
+/exercise/*   /index.html   200
+/bmi-calculator   /index.html   200
+
+# Catch-all for all other paths to be handled by React Router
+/*    /index.html   200
