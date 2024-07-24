@@ -10,15 +10,15 @@ body {
 }
 
 * {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* Remove scrollbar */
 ::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }
 
 img {
@@ -28,41 +28,41 @@ img {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-    /* Adjust specific elements for smaller screens */
-    .hero-banner-img {
-        display: none;
-    }
+  /* Adjust specific elements for smaller screens */
+  .hero-banner-img {
+    display: none;
+  }
 
-    .exercise-card {
-        width: 320px;
-    }
+  .exercise-card {
+    width: 320px;
+  }
 
-    .exercise-video {
-        width: 320px;
-        height: 300px;
-    }
+  .exercise-video {
+    width: 320px;
+    height: 300px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
+  .container {
+    max-width: 720px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+  .container {
+    max-width: 540px;
+  }
 
-    .exercise-card {
-        width: 280px;
-    }
+  .exercise-card {
+    width: 280px;
+  }
 }
 
 /* Navbar */
@@ -70,11 +70,11 @@ img {
   padding: 0 16px;
   display: flex;
   justify-content: center;
-  }
-  
+}
+
 .black-appbar.scrolled {
-  background-color:#fff;
-  }
+  background-color: #fff;
+}
 
 .navbar-logo {
   background-color: aqua;
@@ -84,17 +84,17 @@ img {
 
 .navbar-title {
   flex-grow: 1;
-  color:#000000;
+  color: #000000;
   align-items: center;
   display: flex;
   text-decoration: none;
-  
+
 }
 
 .navbar-link {
-  color:#000000;
+  color: #000000;
   text-decoration: none;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 
 .navbar-link:hover {
@@ -125,99 +125,74 @@ img {
 }
 
 
-  /* Mycarousel */
-  .carousel-container {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    max-height:100vh;
-  }
-  
-  .carousel-legend {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding-right: 40px;
-    text-align: left;
-    color: white;
-    width: 40%;
-    height: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: clamp(350px, 50vw, 100vh);
-  }
-  
-  
-  .explore-button {
-    color: white;
-    background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
-    text-align: center;
-  }
-  
-  .explore-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.5);
-  }
-  
-  /* Control arrows background for better visibility */
-  .carousel .control-arrow {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  .carousel .control-prev.control-arrow {
-    left: 0;
-  }
-  
-  .carousel .control-next.control-arrow {
-    right: 0;
-  }
-   
+/* Mycarousel */
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-height: 90vh;
+}
+
+.carousel-legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-right: 40px;
+  text-align: left;
+  color: white;
+  width: 40%;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(350px, 50vw, 90vh);
+}
+
+
+.explore-button {
+  color: white;
+  background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
+  text-align: center;
+}
+
+.explore-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.5);
+}
+
+/* Control arrows background for better visibility */
+.carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel .control-prev.control-arrow {
+  left: 0;
+}
+
+.carousel .control-next.control-arrow {
+  right: 0;
+}
+
 /* Horizontal-Scrolling-Menu*/
 .horizontal-scrollbar-container {
   position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden; /* Ensure no overflow of scroll menu */
+  overflow: hidden;
 }
 
 .scroll-menu {
   flex-grow: 1;
-  overflow: hidden; /* Hide overflow */
+  overflow: hidden;
 }
-
-.arrow {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255,1);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: 50%; 
-  transform: translateY(50%); /* Center vertically */
-  z-index: 2;
-}
-
-.left-arrow {
-  left: 10px; 
-}
-
-.right-arrow {
-  right: 10px; 
-}
-
 
 /*Exercises */
 /* App.css */
@@ -249,4 +224,54 @@ img {
   .MuiPagination-root {
     font-size: 1rem;
   }
+}
+
+/* src/pages/PageNotFound.css */
+
+.nav {
+  font-size: 4rem;
+  color: #231651;
+  margin-bottom: 20px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.display__img img {
+  width: 300px;
+  /* Adjust as needed */
+  height: auto;
+}
+
+.display__content {
+  text-align: center;
+}
+
+.display__content--info {
+  font-size: 2rem;
+  color: #231651;
+  margin-bottom: 10px;
+}
+
+.display__content--text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
+  color: white;
+  text-transform: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #D0101F;
 }

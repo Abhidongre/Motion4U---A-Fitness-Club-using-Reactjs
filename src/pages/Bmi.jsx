@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Typography, Box, Stack, CircularProgress, Grid } from '@mui/material';
 import { fetchData, bmiOptions } from '../utils/fetchData';
-import bgcl from "../assets/images/bgcl.webp";
+import bgcl2 from "../assets/images/bgcl2.webp";
 import bmiImage from "../assets/images/bmiImage.webp";
 
 const BmiCalculator = () => {
@@ -17,6 +17,12 @@ const BmiCalculator = () => {
             setError('Please enter both weight and height.');
             return;
         }
+
+        if (weight <= 0 || height <= 0) {
+            setError('Weight and height must be positive numbers.');
+            return;
+        }
+
         setError('');
         setLoading(true);
         const url = `https://body-mass-index-bmi-calculator.p.rapidapi.com/metric?weight=${weight}&height=${height}`;
@@ -50,11 +56,10 @@ const BmiCalculator = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent:'center',
-                backgroundImage: `url(${bgcl})`,
+                backgroundImage: `url(${bgcl2})`,
                 backgroundSize: 'cover',
                 padding: "40px 20px 20px 20px",
                 gap: 4,
-                color: 'white',
                 pb:4,
             }}
         >
@@ -65,9 +70,8 @@ const BmiCalculator = () => {
                             py:5,
                             borderRadius: "12px",
                             alignItems: "center",
-                            backgroundColor: "rgba(255, 255, 255, 0.6)",
-                            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
-                            backdropFilter: "blur(5px)",
+                            border:"5px solid white",
+                            boxShadow: "0px 0px 10px rgba(0, 0, 0,0.5)",
                             
                         }}
                     >
@@ -86,7 +90,7 @@ const BmiCalculator = () => {
                                     onChange={(e) => setWeight(e.target.value)}
                                     autoFocus
                                     variant="outlined"
-                                    sx={{ '& .MuiOutlinedInput-root': { borderRadius: '20px' } }}
+                                    sx={{ '& .MuiOutlinedInput-root': { borderRadius: '20px',  } }}
                                 />
                             </Box>
                             <Box width="80%">
@@ -137,7 +141,6 @@ const BmiCalculator = () => {
                                 boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
                                 textAlign: 'center',
                                 width: '100%',
-                                backdropFilter: "blur(3px)",
                             }}
                         >
                             <Typography variant="h5" sx={{ fontWeight: 600, color: "#002366" }}>
@@ -161,9 +164,9 @@ const BmiCalculator = () => {
                             maxHeight: '400px',
                             borderRadius:"12px",
                             objectFit: 'contain',
-                            backgroundColor:"rgba(255,255,255,0.4)",
+                            border:"5px solid white",
+                            backgroundColor:"rgba(255,255,255,0.1)",
                             boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
-                            backdropFilter:"blur(5px)"
                         }}
                     />
                 </Grid>

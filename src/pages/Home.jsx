@@ -4,8 +4,6 @@ import About from "../components/About";
 
 
 const Home = () => {
-
-
   return (
     <Box>
       <MyCarousel />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
 import Exercises from "../components/Exercises";
 import SearchExercises from "../components/SearchExercises";
 import ExerciseBg from "../assets/images/exercise_bg.webp";
@@ -29,6 +29,7 @@ const ExercisesPage = () => {
                   textTransform: "uppercase",
                   fontWeight: 800,
                   color: "#fff",
+                  fontFamily: "serif",
                   letterSpacing: "1px",
                 }}>
                   Don’t <span style={{color:"orangered"}}>think</span>, begin <span  style={{color:"orangered"}}>today</span>!
