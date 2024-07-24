@@ -7,7 +7,6 @@ import Footer from './components/Footer.jsx';
 import Navbar from "./components/Navbar";
 import ExercisesPage from './pages/ExercisesPage.jsx';
 import Bmi from './pages/Bmi.jsx';
-import PageNotFound from './pages/PageNotFound.jsx';
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
         <Route path="/exercise" element={<ExercisesPage />} />
         <Route path="/bmi-calculator" element={<Bmi />} />
-        <Route path="/*" element={<PageNotFound />} /> {/* Add this line */}
       </Routes>
       <Footer />
     </Box>
