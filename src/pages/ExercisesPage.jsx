@@ -3,6 +3,8 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 import Exercises from "../components/Exercises";
 import SearchExercises from "../components/SearchExercises";
 import ExerciseBg from "../assets/images/exercise_bg.webp";
+import exerciseImage from '../assets/icons/muscle.png'; 
+
 
 const ExercisesPage = () => {
   const [bodyPart, setBodyPart] = useState('all');

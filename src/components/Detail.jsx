@@ -2,6 +2,8 @@ import { Typography, Stack, Box , Button, capitalize} from "@mui/material";
 import BodyPartImage from '../assets/icons/body-part.png';
 import TargetImage from '../assets/icons/target.png';
 import EquipmentImage from '../assets/icons/equipment.png';
+import exerciseImage from '../assets/icons/muscle.png'; 
+
 
 const Detail = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment, instructions } = exerciseDetail || {};
@@ -33,7 +35,7 @@ const Detail = ({ exerciseDetail }) => {
       {gifUrl && (
         <Box
           component="img"
-          src={gifUrl}
+          src={exerciseImage}
           alt={name}
           loading="lazy"
           className="detail-image"

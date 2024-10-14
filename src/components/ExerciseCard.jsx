@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import exerciseImage from '../assets/icons/muscle.png'; 
 import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 
 const ExerciseCard = ({ exercise }) => {
+  console.log(exercise)
   return (
     <Card
       sx={{
         border: '1px solid #e0e0e0',
         textDecoration: 'none',
-        maxHeight:"500px",
+        maxHeight: "500px",
         display: 'block',
         '&:hover': { 
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)', 
@@ -19,6 +21,8 @@ const ExerciseCard = ({ exercise }) => {
       }}
     >
       <CardActionArea
+        component={Link}
+        to={`/exercise/${exercise.id}`} // Direct Link on whole area
         sx={{
           '&:hover .MuiCardActionArea-focusHighlight': {
             opacity: 0,
@@ -27,20 +31,15 @@ const ExerciseCard = ({ exercise }) => {
       >
         <CardMedia
           component="img"
-          image={exercise.gifUrl}
+          image={exerciseImage} // Fixed image path
           alt={exercise.name}
           sx={{
-            width: '100%',
-            height: {
-              xs: '200px', 
-              sm: '250px', 
-              md: '280px', 
-            },
-            objectFit: 'cover',
-            '&:hover': {
-              transform: 'scale(1.1)', 
-              transition: 'transform 0.2s ease-in-out',
-            }
+            padding:'10px',
+            width:'100%',
+            height:'140px',
+            objectFit: 'contain',
+            alignContent:"center"
+            
           }}
         />
         <CardContent
@@ -66,9 +65,7 @@ const ExerciseCard = ({ exercise }) => {
           >
             {exercise.name}
           </Typography>
-          <Box sx={{ mt: '0.3rem', textAlign: 'center' }}
-          component={Link}
-          to={`/exercise/${exercise.id}`}>
+          <Box sx={{ mt: '0.3rem', textAlign: 'center' }}>
             <Typography
               variant="button"
               sx={{
@@ -80,7 +77,8 @@ const ExerciseCard = ({ exercise }) => {
                 textTransform: 'none',
                 display: 'inline-block',
                 '&:hover':{
-                  
+                  backgroundImage: 'linear-gradient(to right, #d32f2f, #c62828)', // Added hover effect for button
+                  transition: 'background-image 0.3s ease',
                 }
               }}
             >
